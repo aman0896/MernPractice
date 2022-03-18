@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+//connect database with server
+require("./DBConnect");
+
 //Initialize expree
 const app = express();
 
