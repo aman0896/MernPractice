@@ -10,6 +10,22 @@ router.get("/list", async (req, res) => {
   res.json(data);
 });
 
+//get movie by id, Model.findOne()
+router.get("/list/:id", async (req, res) => {
+  const movieId = req.params.id;
+  try {
+    const data = await movieSchema.findOne({ _id: movieId });
+    console.log(data, "data");
+    if (data) {
+      return res.json(data);
+    } else {
+      return res.json({ msg: "could not find movie" });
+    }
+  } catch {
+    res.json({ msg: "movie not found" });
+  }
+});
+
 //Add movies
 router.post("/add", (req, res) => {
   console.log(req.body, "body");
