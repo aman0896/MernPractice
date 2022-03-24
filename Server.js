@@ -12,11 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 const port = 3001;
 
-//importing file
-const movieApi = require("./routes/movies");
-
-//middleware router
-app.use("/movies", movieApi);
+//router handler
+app.use("/movies", require("./routes/movies"));
+app.use("/students", require("./routes/students"));
 
 //listen server on port
 app.listen(port, () => {
