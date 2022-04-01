@@ -1,0 +1,38 @@
+.navbar-container {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-item {
+  width: 80%;
+  height: 80px;
+  color: rgb(25, 0, 48);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navbar-brand {
+  flex: 1;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: start;
+}
+
+.navbar-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.navbar-link {
+  font-size: 20px;
+  margin: 0px 20px;
+  text-decoration: none;
+}
