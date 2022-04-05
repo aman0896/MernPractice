@@ -14,8 +14,9 @@ function Homepage() {
   };
 
   useEffect(() => {
-    if (count > 0 && count <= 10) setUpdate(true);
-    else setUpdate(false);
+    if (count < 1000) {
+      setCount(count + 1);
+    }
   }, [count]);
 
   return (
